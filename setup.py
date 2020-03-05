@@ -92,30 +92,7 @@ __entry_points__ = {
 
 
 def main():
-    import io
-    with io.open(os.path.join(HERE, 'README.rst'), 'r') as readme:
-        setup(
-            name                 = __project__,
-            version              = __version__,
-            description          = __doc__,
-            long_description     = readme.read(),
-            classifiers          = __classifiers__,
-            author               = __author__,
-            author_email         = __author_email__,
-            url                  = __url__,
-            license              = [
-                c.rsplit('::', 1)[1].strip()
-                for c in __classifiers__
-                if c.startswith('License ::')
-            ][0],
-            keywords             = __keywords__,
-            packages             = find_packages(),
-            include_package_data = True,
-            platforms            = __platforms__,
-            install_requires     = __requires__,
-            extras_require       = __extra_requires__,
-            entry_points         = __entry_points__,
-        )
+    print('skip')
 
 
 if __name__ == '__main__':
